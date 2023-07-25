@@ -11,7 +11,7 @@ func main() {
 
 	fmt.Println(arr)
 
-	var numbers = []int{1, 2, 3}
+	var numbers = [...]int{1, 2, 3}
 
 	fmt.Println(numbers)
 }
