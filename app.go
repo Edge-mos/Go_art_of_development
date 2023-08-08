@@ -8,6 +8,7 @@ func main() {
 	err := throwError()
 	if err != nil {
 		fmt.Println(err)
+		err.Unwrap()
 	}
 
 }
@@ -22,12 +23,16 @@ type AppError struct {
 	Field  int
 }
 
-func (ae *AppError) Error() string {
+func (ae *AppError) Error() string { // реализуем тут интерфейс error
 	fmt.Println(ae.Custom)
 	return ae.Err.Error()
 }
 
-func throwError() error {
+func (ae *AppError) Unwrap() error {
+	return ae.Err
+}
+
+func throwError() *AppError {
 	appError := AppError{
 		Err:    fmt.Errorf("my error"),
 		Custom: "value here",
@@ -36,4 +41,4 @@ func throwError() error {
 	return &appError
 }
 
-//var _ Error = &AppError{}
+var _ error = &AppError{}
