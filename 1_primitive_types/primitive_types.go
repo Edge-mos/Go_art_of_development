@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+const GLOBAL = "Global_const"
+
+var GlobalInt = 42
+
 func main() {
 	fmt.Println("Hello World")
 
@@ -31,7 +35,7 @@ func main() {
 	var isTrue bool = true
 	var name string = "Edge"
 
-	fmt.Println(a, b, c, d, e, f, g, h, i, j, k, m, n, o, p, q, isTrue, name)
+	fmt.Println(a, b, c, d, e, f, g, h, i, j, k, m, n, o, p, q, isTrue, name, GlobalInt)
 	//-----------------------------------------------------------------------
 	fmt.Println("PART two ------")
 	var digit = 7
