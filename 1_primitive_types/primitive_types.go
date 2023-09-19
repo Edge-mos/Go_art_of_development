@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 const GLOBAL = "Global_const"
@@ -51,5 +52,15 @@ func main() {
 	var res = fmt.Sprintf("My name is: %s. And i'm %d ears old", user, age)
 
 	fmt.Println(res)
+
+	fmt.Println("-------------with incoming args------------")
+
+	args := os.Args
+	fmt.Printf("Type of args: %T, Values: %v \n", args, args)
+	for index, arg := range args {
+		fmt.Println(index, "-->", arg)
+	}
+
+	fmt.Printf("User custom args is: %v \n", args[1:])
 
 }
