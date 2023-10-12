@@ -1,0 +1,19 @@
+
+Создаём мапу, есть несколько путей
+
+make - выделение области памяти
+map[ключ] значение
+
+counts := make(map[string]int) - выделение памяти под мапу 0 сайза
+mapWithDefSize := make(map[string]int, 10) - мапа с сайзом 10
+
+
+for input.Scan() (input.Scan() - возвращает bool)
+
+file, err := os.Open(arg) - открывает файл, получает ссылку на файл. Можно потом передать на чтение(сканнер)
+input := bufio.NewScanner(f) - принимает что-то, что реализует Reader
+
+fileData, err := os.ReadFile(filename) - читает весь контент файла, возвращает []byte
+
+
+
