@@ -1,7 +1,7 @@
 package main
 
 import (
-	"art_of_development/0_intro_samples/packages/conv"
+	"art_of_development/0_intro_samples/packages_examples/conv"
 	"fmt"
 )
 

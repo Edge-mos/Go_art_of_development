@@ -1,7 +1,8 @@
-package main
+package types
 
 import (
 	"fmt"
+	"math"
 	"os"
 )
 
@@ -9,7 +10,7 @@ const GLOBAL = "Global_const"
 
 var GlobalInt = 42
 
-func main() {
+func PrimitivesEx() {
 	fmt.Println("Hello World")
 
 	//go_types
@@ -63,4 +64,17 @@ func main() {
 
 	fmt.Printf("User custom args is: %v \n", args[1:])
 
+	checkBinary(15)
+	formatFloats()
+
+}
+
+func checkBinary(decimal int) {
+	fmt.Printf("Decimal %d in binary = %#b \n", decimal, decimal)
+}
+
+func formatFloats() {
+	for i := 0; i < 8; i++ {
+		fmt.Printf("i= %d ; e^x= %8.3f \n", i, math.Exp(float64(i)))
+	}
 }
